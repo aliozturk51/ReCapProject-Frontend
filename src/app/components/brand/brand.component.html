@@ -1,24 +1,3 @@
-  <!-- <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
-    <span class="visually-hidden">Loading...</span>
-</div>
-
-<table *ngIf="dataLoaded==true" class="table table-striped table-hover">
-    <thead>
-        <tr>
-            <th>Brand Id</th>
-            <th>Brand Name</th>
-
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let brand of brands">
-            <td>{{brand.brandId}}</td>
-            <td>{{brand.brandName}}</td>
-        </tr>
-    </tbody>
-    
-</table> -->
-
 <ul class="list-group">
     <li class = "list-group-item" routerLink="/cars"><h5>Tüm Markalar</h5></li>
     <li (click) ="setCurrentBrand(brand)" routerLink="cars/brand/{{brand.brandId}}" 

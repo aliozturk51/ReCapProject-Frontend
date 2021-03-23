@@ -10,8 +10,9 @@ import { CarService } from 'src/app/services/car.service';
 })
 export class CarComponent implements OnInit {
   cars: Car[] = [];
-
   dataLoaded = false;
+  apiUrl = 'https://localhost:44378/';
+  i = '/Images/default.jpg';
 
   constructor(
     private carService: CarService,
@@ -40,6 +41,13 @@ export class CarComponent implements OnInit {
   }
   getCarsByColor(colorId: number) {
     this.carService.getCarsByColor(colorId).subscribe((response) => {
+      this.cars = response.data;
+      this.dataLoaded = true;
+    });
+  }
+
+  getCarsDetailsByCarId(carId: number) {
+    this.carService.getCarsDetailsByCarId(carId).subscribe((response) => {
       this.cars = response.data;
       this.dataLoaded = true;
     });
