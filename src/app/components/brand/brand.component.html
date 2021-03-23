@@ -1,4 +1,4 @@
-  <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
+  <!-- <div *ngIf="dataLoaded==false" class="spinner-border text-success" role="status">
     <span class="visually-hidden">Loading...</span>
 </div>
 
@@ -17,4 +17,11 @@
         </tr>
     </tbody>
     
-</table>
+</table> -->
+
+<ul class="list-group">
+    <li class = "list-group-item" routerLink="/cars"><h5>Tüm Markalar</h5></li>
+    <li (click) ="setCurrentBrand(brand)" routerLink="cars/brand/{{brand.brandId}}" 
+    [class] = "getCurrentBrandClass(brand)" 
+    *ngFor= "let brand of brands">{{brand.brandName}}</li>
+</ul>
