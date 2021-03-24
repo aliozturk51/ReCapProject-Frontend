@@ -1,5 +1,4 @@
-<div class="text-center text-danger"><strong>Cars</strong></div>
-<br>
+<div class="text-center text-danger"><h2>Cars</h2></div>
 <br>
 <div *ngIf="dataLoaded == false" class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
@@ -29,7 +28,7 @@
         <li class="list-group-item">Brand: {{ car.brandName | uppercase }}</li>
         <li class="list-group-item">Model Year: {{ car.modelYear }}</li>
         <li class="list-group-item">
-          Daily Price: {{ car.dailyPrice + "₺" }}
+          Daily Price: {{ car.dailyPrice | currency: "₺" }}
         </li>
       </ul>
       <section style="float: left">

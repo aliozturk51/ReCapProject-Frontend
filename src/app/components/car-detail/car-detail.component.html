@@ -6,7 +6,7 @@
   <div *ngIf="dataLoaded==true" class="card mb-3">
     <div *ngFor="let car of cars" class="card-header text-center">
       <strong>
-          <h5>Araç Bilgileri</h5>
+          <h5>Car Details</h5>
       </strong>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -43,7 +43,7 @@
             <td>{{car.description}}</td>
             <td>{{car.colorName}}</td>
             <td>{{car.modelYear}}</td>
-            <td>{{car.dailyPrice + "₺"}}</td>
+            <td>{{car.dailyPrice | currency: "₺"}}</td>
         </tr>
       
     </table>

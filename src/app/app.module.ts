@@ -11,6 +11,9 @@ import { NaviComponent } from './components/navi/navi.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { CarComponent } from './components/car/car.component';
 import { CarDetailComponent } from './components/car-detail/car-detail.component';
+import { BrandFilterPipe } from './pipes/brand-filter.pipe';
+import { CarFilterPipe } from './pipes/car-filter.pipe';
+import { ColorFilterPipe } from './pipes/color-filter.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,9 @@ import { CarDetailComponent } from './components/car-detail/car-detail.component
     RentalComponent,
     CarComponent,
     CarDetailComponent,
+    BrandFilterPipe,
+    CarFilterPipe,
+    ColorFilterPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
